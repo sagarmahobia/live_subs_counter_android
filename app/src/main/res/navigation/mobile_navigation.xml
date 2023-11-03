@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sagar.livesubscounter.activities.main.compare.CompareFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_compare">
+        <argument
+            android:name="firstChannelId"
+            app:argType="string" />
+        <argument
+            android:name="secondChannelId"
+            app:argType="string" />
+        <argument
+            android:name="isHome"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_homeFragment_to_channelFragment"
+            app:destination="@id/channelFragment" />
+        <action
+            android:id="@+id/action_homeFragment_pop2"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteChannelsFragment"
+        android:name="com.sagar.livesubscounter.activities.main.favoritechannels.FavoriteChannelsFragment"
+        android:label="Favorite Channels"
+        tools:layout="@layout/fragment_favorite_channels">
+        <action
+            android:id="@+id/action_favoriteChannelsFragment_to_channelFragment"
+            app:destination="@id/channelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteComparesFragment"
+        android:name="com.sagar.livesubscounter.activities.main.favoritecompares.FavoriteComparesFragment"
+        android:label="Favorite Compares"
+        tools:layout="@layout/fragment_favorite_compares">
+        <action
+            android:id="@+id/action_favoriteComparesFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/channelFragment"
+        android:name="com.sagar.livesubscounter.activities.main.channel.ChannelFragment"
+        android:label="Live Subscriber"
+        tools:layout="@layout/fragment_channel">
+        <argument
+            android:name="channelId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_channelFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/compareFragment"
+        android:name="com.sagar.livesubscounter.activities.main.compare.CompareFragment"
+        android:label="Live Comparison"
+        tools:layout="@layout/fragment_compare">
+        <argument
+            android:name="firstChannelId"
+            app:argType="string" />
+        <argument
+            android:name="secondChannelId"
+            app:argType="string" />
+        <argument
+            android:name="isHome"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_compareFragment_to_channelFragment"
+            app:destination="@id/channelFragment" />
+    </fragment>
+</navigation>

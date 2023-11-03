@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">YT Subscriber Comparator</string>
+    <string name="title_activity_home">YT Subscriber Comparator</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">YT Subscriber Comparator</string>
+    <string name="nav_header_subtitle">feat. PewDiePie Vs T-Series</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_match">No matches were found</string>
+    <string name="error_message">Something went wrong. Swipe down to refresh.</string>
+
+    <!--AdMob-->
+
+    <string name="admob_app_pub_id">##Removed</string>
+    <string name="admob_full_screen_adunit">##Removed</string>
+    <string name="admob_bottom_ad_unit">##Removed</string>
+    <string name="search_and_add">##Removed</string>
+
+</resources>
